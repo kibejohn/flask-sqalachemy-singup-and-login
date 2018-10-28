@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/jumbotron-narrow.css">
+    <link rel="stylesheet" href="static/css/signup.css">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    <script src="../static/js/signUp.js"></script>
+    
+   
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header login">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home</a></li>
+            <li class="active btn btn-xs "><a href="/showSignUp">Sign Up</a></li>
+          </ul>
+          <ul class="nav nav-pills pull-left">
+            <li role="presentation" class="active" ><a href="/">app.com</a></li>
+            </ul>
+        </nav>
+      </div>
+
+      <div class="jumbotron">
+        <h1>custom templates</h1>
+        <form class="form-signin" method="POST">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control"
+        value="{{request.form.username }}" placeholder="Email address" required autofocus>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control"
+        value="{{request.form.password }}" placeholder="Password" required>
+        
+        <input  type=submit value=Login id="btnSignUp" class="btn btn-lg btn-primary btn-block" >
+      </form>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; scarn.com 2018</p>
+      </footer>
+
+    </div>
+  </body>
+</html>
+
